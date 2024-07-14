@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flip-container {
+            perspective: 1000px;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .flipper {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        .flip-container:hover .flipper {
+            transform: rotateY(180deg);
+        }
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            top: 0;
+            left: 0;
+        }
+        .back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <table border="10">
+            <thead>
+                <tr><th>NAME</th><th>age</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ravi</td><td>21</td>
+                </tr>
+                <tr>
+                    <td>kiran</td><td>21</td>
+                </tr>
+                <tr>
+                    <td>virat</td><td>36</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <br>
+    <hr>
+    
+</body>
+</html>
